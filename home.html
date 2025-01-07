@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>To-Do List</title>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <section class="container">
+      <div class="heading">
+        <img class="heading__img" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/756881/laptop.svg" alt="To-do list">
+        <h1 class="heading__title">To-Do List</h1>
+      </div>
+
+      <!-- Categories Section -->
+      <div class="categories">
+        <!-- Today Category -->
+        <div class="category" id="daily">
+          <h2><i class="fas fa-sun"></i> Daily</h2>
+          <ul class="toDoList" id="dayList"></ul>
+          <select id="dayTaskSelect">
+            <option value="">Select a Task</option>
+            <option value="Eating">Eating</option>
+            <option value="Dressing">Dressing</option>
+            <option value="Yoga">Yoga</option>
+            <option value="Sleeping">Sleeping</option>
+          </select>
+          <button class="button" id="addDayTask">Add Task</button>
+        </div>
+
+        <!-- This Week Category -->
+        <div class="category" id="weekly">
+          <h2><i class="fas fa-calendar-week"></i> Weekly</h2>
+          <ul class="toDoList" id="weekList"></ul>
+          <select id="weekTaskSelect">
+            <option value="">Select a Task</option>
+            <option value="Check and Reply to mails">Check and Reply to mails</option>
+            <option value="Cleaning">Cleaning</option>
+            <option value="Cooking">Cooking</option>
+            <option value="Reading Books">Reading Books</option>
+          </select>
+          <button class="button" id="addWeekTask">Add Task</button>
+        </div>
+
+        <!-- This Month Category -->
+        <div class="category" id="monthly">
+          <h2><i class="fas fa-calendar-alt"></i> Monthly</h2>
+          <ul class="toDoList" id="monthList"></ul>
+          <select id="monthTaskSelect">
+            <option value="">Select a Task</option>
+            <option value="Budgeting">Budgeting</option>
+            <option value="Parties">Parties</option>
+            <option value="Family meets">Family meets</option>
+            <option value="Health Checks">Health Checks</option>
+          </select>
+          <button class="button" id="addMonthTask">Add Task</button>
+        </div>
+
+        <!-- This Year Category -->
+        <div class="category" id="year">
+          <h2><i class="fas fa-calendar-year"></i> Year</h2>
+          <ul class="toDoList" id="yearList"></ul>
+          <select id="yearTaskSelect">
+            <option value="">Select a Task</option>
+            <option value="Birthday">Birthday</option>
+            <option value="Shopping">Shopping</option>
+            <option value="Resolutions">Resolutions</option>
+          </select>
+          <button class="button" id="addYearTask">Add Task</button>
+        </div>
+      </div>
+    </section>
+
+    <script src="node.js"></script>
+  </body>
+</html>

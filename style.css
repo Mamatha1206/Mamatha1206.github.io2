@@ -1,0 +1,214 @@
+/* General body styles */
+body {
+    background: linear-gradient(45deg, #f7a7ff, #24bffb, #ff9a8b, #a39bd2);  /* Multi-color gradient background */
+    min-height: 100vh;
+    padding: 1rem;
+    box-sizing: border-box;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #494a4b;
+    font-family: "Gochi Hand", cursive;
+    text-align: center;
+    font-size: 130%;
+    background-size: 400% 400%;  /* Animate gradient */
+    animation: gradientAnimation 10s ease infinite;  /* Animate the gradient */
+}
+
+/* Add the gradient animation */
+@keyframes gradientAnimation {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Container for the to-do list */
+.container {
+    width: 100%;
+    height: auto;
+    min-height: 500px;
+    max-width: 800px;
+    min-width: 250px;
+    background: #f1f5f8;
+    background-image: radial-gradient(#bfc0c1 7.2%, transparent 0);
+    background-size: 25px 25px;
+    border-radius: 20px;
+    box-shadow: 4px 3px 7px 2px #00000040;
+    padding: 1rem;
+    box-sizing: border-box;
+    position: relative;
+    z-index: 1;
+}
+
+/* Heading styles */
+.heading {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+}
+
+.heading__title {
+    transform: rotate(2deg);
+    padding: 0.2rem 1.2rem;
+    border-radius: 20% 5% 20% 5% / 5% 20% 25% 20%;
+    background-color: rgba(0, 255, 196, 0.7);
+    font-size: 1.5rem;
+}
+
+.heading__img {
+    width: 24%;
+}
+
+/* Categories section: display items horizontally */
+.categories {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+/* Category section styles */
+.category {
+    padding: 1rem;
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    width: 22%; /* Ensuring each category takes up about 1/4 of the container */
+    text-align: center;
+}
+
+.category h2 {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.category i {
+    margin-right: 10px; /* Space between icon and text */
+    color: #24bffb;
+}
+
+/* Category button styles */
+.category button {
+    margin-top: 10px;
+    background-color: rgba(0, 255, 196, 0.7);
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 5px;
+    font-family: "Gochi Hand", cursive;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.category button:hover {
+    transform: scale(1.1);
+}
+
+/* Select input styles */
+select {
+    padding: 0.5rem;
+    font-size: 1rem;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: 2px solid #494a4b;
+    background-color: #f9f9f9;
+    width: 100%;
+}
+
+/* Task list styles */
+.toDoList li {
+    position: relative;
+    padding: 0.5rem;
+    cursor: pointer;
+}
+
+.toDoList li.completed {
+    text-decoration: line-through;
+    color: grey;
+}
+
+.toDoList li:hover {
+    background-color: rgba(0, 255, 196, 0.3);
+}
+
+.toDoList li button {
+    background-color: #24bffb;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 0.8rem;
+    margin-left: 10px;
+    padding: 3px 7px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.toDoList li button:hover {
+    background-color: #1e91c4;
+}
+
+/* Modal for task selection */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.6);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 400px;
+    text-align: center;
+}
+
+.modal button {
+    padding: 0.7rem 1rem;
+    background-color: #ff9a8b;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-family: "Gochi Hand", cursive;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal button:hover {
+    background-color: #e87d7d;
+}
+
+.modal-close {
+    background-color: #494a4b;
+}
+
+.modal-close:hover {
+    background-color: #383737;
+}
+
+#daily {
+    background-color: #E6E6FA;  /* Lavender */
+  }
+  
+  #weekly {
+    background-color: #FFB6C1;  /* Light pink */
+  }
+  
+  #monthly {
+    background-color: #ADD8E6;  /* Light blue */
+  }
+  
+  #year {
+    background-color: #98FB98;  /* Light green */
+  }
